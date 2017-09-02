@@ -86,7 +86,7 @@ app.get("/register", function(req, res){
 // adding new robot by model we set up
 app.post("/newRobot", function (req, res){
   const username = req.body.username
-  const passowrd = req.body.artist
+  const passowrd = req.body.password
   const name = req.body.name
   const skills = req.body.skills
   const university = req.body.university
@@ -94,18 +94,19 @@ app.post("/newRobot", function (req, res){
   const job = req.body.job
   const company = req.body.company
   const phonenumber = req.body.phonenumber
-  const user = new User()
-  // console.log(new User)
-
-  users.username = username
-  users.passowrd = passowrd
-  users.name = name
-  users.skills = skills
-  users.university = university
-  users.email = email
-  users.job = job
-  users.company = company
-  users.phonenumber = phonenumber
+  
+  
+  const newuser = new User()
+   // console.log(new User)
+  newuser.username = username
+  newuser.passowrd = passowrd
+  newuser.name = name
+  newuser.skills = skills
+  newuser.university = university
+  newuser.email = email
+  newuser.job = job
+  newuser.company = company
+  newuser.phonenumber = phonenumber
 
   console.log(users);
   user
