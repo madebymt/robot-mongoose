@@ -117,7 +117,7 @@ app.post("/newRobot", function (req, res){
     .catch(function(error) {
       console.log("error", error)
       res.render("new", {
-        album: album,
+        user: user,
         errors: error.errors
       })
     })
